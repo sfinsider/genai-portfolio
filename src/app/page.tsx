@@ -122,12 +122,13 @@ const projects: Project[] = [
 
 const tagStyles: Record<Category, string> = {
   Music:
-    "bg-violet-100 text-violet-700 border-violet-200 dark:bg-violet-900/30 dark:text-violet-200 dark:border-violet-800",
+    "bg-[#8B5CF6]/15 text-[#8B5CF6] border-[#8B5CF6]/30 dark:bg-[#8B5CF6]/20 dark:text-[#C4B5FD] dark:border-[#8B5CF6]/40",
   Game:
-    "bg-blue-100 text-blue-700 border-blue-200 dark:bg-blue-900/30 dark:text-blue-200 dark:border-blue-800",
-  App: "bg-green-100 text-green-700 border-green-200 dark:bg-green-900/30 dark:text-green-200 dark:border-green-800",
+    "bg-[#3B82F6]/15 text-[#3B82F6] border-[#3B82F6]/30 dark:bg-[#3B82F6]/20 dark:text-[#93C5FD] dark:border-[#3B82F6]/40",
+  App:
+    "bg-[#10B981]/15 text-[#10B981] border-[#10B981]/30 dark:bg-[#10B981]/20 dark:text-[#6EE7B7] dark:border-[#10B981]/40",
   Video:
-    "bg-orange-100 text-orange-700 border-orange-200 dark:bg-orange-900/30 dark:text-orange-200 dark:border-orange-800",
+    "bg-[#F59E0B]/15 text-[#F59E0B] border-[#F59E0B]/30 dark:bg-[#F59E0B]/20 dark:text-[#FCD34D] dark:border-[#F59E0B]/40",
 };
 
 export default function PortfolioPage() {
@@ -174,31 +175,31 @@ export default function PortfolioPage() {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       {/* Hero */}
-      <section className="px-6 md:px-10 lg:px-16 pt-24 md:pt-40 pb-12 md:pb-20">
+      <section className="px-6 md:px-10 lg:px-16 pt-24 md:pt-36 pb-12 md:pb-20">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05]">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight md:leading-[1.05]">
             Andras Kanai - GenAI Portfolio
           </h1>
-          <p className="mt-6 max-w-2xl mx-auto text-[15px] md:text-lg text-[var(--muted-foreground)]">
+          <p className="mt-6 max-w-2xl mx-auto text-[15px] md:text-xl leading-relaxed text-[var(--muted-foreground)]">
             {heroSubtitle}
           </p>
         </div>
       </section>
 
       {/* Grid */}
-      <section className="px-6 md:px-10 lg:px-16 pb-20 md:pb-28">
-        <div className="max-w-6xl mx-auto grid gap-6 sm:gap-7 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="px-6 md:px-10 lg:px-16 pb-24 md:pb-32">
+        <div className="max-w-7xl mx-auto grid gap-6 sm:gap-8 md:gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((p) => (
             <button
               key={p.id}
               onClick={() => open(p)}
-              className="group text-left rounded-xl border border-[var(--border)] bg-[var(--card)] shadow-sm hover:shadow-md transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)]"
+              className="group text-left rounded-xl border border-[var(--border)] bg-[var(--card)] shadow-sm hover:shadow-lg transition-all duration-300 ease-out hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)]"
             >
-              <div className="relative aspect-[3/4] overflow-hidden rounded-t-xl">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-t-xl bg-[var(--muted)]">
                 <img
                   src={p.image}
                   alt={p.title}
-                  className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                  className="h-full w-full object-cover will-change-transform transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                   loading="lazy"
                 />
                 <div
@@ -207,11 +208,11 @@ export default function PortfolioPage() {
                   {p.category}
                 </div>
               </div>
-              <div className="p-4 md:p-5">
-                <h3 className="text-base md:text-lg font-semibold">
+              <div className="p-5 md:p-6">
+                <h3 className="text-base md:text-lg font-semibold tracking-tight">
                   {p.title}
                 </h3>
-                <p className="mt-1.5 text-sm text-[var(--muted-foreground)] line-clamp-2">
+                <p className="mt-2 text-sm text-[var(--muted-foreground)] line-clamp-2 leading-relaxed">
                   {p.description}
                 </p>
               </div>
@@ -233,16 +234,16 @@ export default function PortfolioPage() {
       {active && (
         <div role="dialog" aria-modal="true" className="fixed inset-0 z-50">
           <div
-            className="absolute inset-0 bg-black/40 backdrop-blur-[1px] opacity-100 animate-in fade-in duration-200"
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm opacity-100 animate-in fade-in duration-200"
             onClick={close}
           />
           <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-            <div className="w-full max-w-2xl rounded-2xl bg-[var(--card)] text-[var(--foreground)] shadow-lg border border-[var(--border)] animate-in zoom-in-95 fade-in duration-200 max-h-[90vh] overflow-hidden flex flex-col">
+            <div className="w-full max-w-2xl rounded-2xl bg-[var(--card)] text-[var(--foreground)] shadow-2xl border border-[var(--border)] animate-in zoom-in-95 fade-in duration-200 max-h-[90vh] overflow-hidden flex flex-col">
               <div className="relative aspect-[16/10] overflow-hidden">
                 <img src={active.image} alt={active.title} className="h-full w-full object-cover" />
               </div>
               <div className="flex-1 min-h-0 overflow-y-auto">
-                <div className="sticky top-0 z-10 bg-[var(--card)]/95 backdrop-blur supports-[backdrop-filter]:bg-[var(--card)]/80 px-5 md:px-6 py-3 border-b border-[var(--border)]">
+                <div className="sticky top-0 z-10 bg-[var(--card)]/95 backdrop-blur supports-[backdrop-filter]:bg-[var(--card)]/80 px-5 md:px-6 py-3.5 border-b border-[var(--border)]">
                   <div className="flex items-center justify-between gap-3">
                     <div className={`inline-flex rounded-full border px-3 py-1 text-xs font-medium ${tagStyles[active.category]}`}>
                       {active.category}
@@ -250,22 +251,22 @@ export default function PortfolioPage() {
                     <button
                       onClick={close}
                       aria-label="Close"
-                      className="rounded-md p-2 text-[var(--muted-foreground)] hover:bg-[var(--accent)] hover:text-[var(--foreground)] transition-colors"
+                      className="rounded-md p-2.5 text-[var(--foreground)]/80 hover:text-[var(--foreground)] bg-[var(--accent)]/60 hover:bg-[var(--accent)] border border-[var(--border)] shadow-sm transition-colors"
                     >
                       ✕
                     </button>
                   </div>
                 </div>
                 <div className="p-5 md:p-6">
-                  <h3 className="text-xl font-semibold">{active.title}</h3>
-                  <p className="mt-2 text-[15px] text-[var(--muted-foreground)]">{active.description}</p>
-                  <div className="mt-4">
-                    <h4 className="text-sm font-semibold tracking-wide text-[var(--muted-foreground)] uppercase">Role</h4>
-                    <p className="mt-1 text-[15px]">{active.role}</p>
+                  <h3 className="text-2xl font-bold tracking-tight">{active.title}</h3>
+                  <p className="mt-3 text-[15px] leading-relaxed text-[var(--muted-foreground)]">{active.description}</p>
+                  <div className="mt-6">
+                    <h4 className="text-xs font-semibold tracking-wider text-[var(--muted-foreground)] uppercase">Role</h4>
+                    <p className="mt-2 text-[15px] leading-relaxed">{active.role}</p>
                   </div>
-                  <div className="mt-4">
-                    <h4 className="text-sm font-semibold tracking-wide text-[var(--muted-foreground)] uppercase">AI Tools</h4>
-                    <ul className="mt-1 flex flex-wrap gap-2">
+                  <div className="mt-6">
+                    <h4 className="text-xs font-semibold tracking-wider text-[var(--muted-foreground)] uppercase">AI Tools</h4>
+                    <ul className="mt-2 flex flex-wrap gap-2">
                       {active.tools.map((t) => (
                         <li
                           key={t}
@@ -276,14 +277,14 @@ export default function PortfolioPage() {
                       ))}
                     </ul>
                   </div>
-                  <div className="mt-6 pb-2">
+                  <div className="mt-8 pb-2">
                     <button
                       type="button"
                       onClick={(e) => {
                         e.stopPropagation();
                         openExternal(active.link);
                       }}
-                      className="inline-flex items-center gap-2 rounded-lg bg-[var(--foreground)] text-[var(--background)] px-4 py-2 text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer"
+                      className="inline-flex items-center gap-2 rounded-lg bg-[var(--foreground)] text-[var(--background)] px-4 py-2.5 text-sm font-medium hover:opacity-90 transition-[opacity,transform] duration-200 will-change-transform"
                       aria-label="Open external project in a new tab"
                     >
                       View Project
