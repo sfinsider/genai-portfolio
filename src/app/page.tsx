@@ -27,7 +27,7 @@ const projects: Project[] = [
     role:
       "I developed the album's concept, selected the novels for adaptation, and was responsible for prompting and iterating with both the LLM and the music-generating AI. Furthermore, I personally wrote every single chorus.",
     tools: ["ChatGPT-4", "Suno", "Flux"],
-    link: "#",
+    link: "https://www.youtube.com/watch?v=ZOPnJi8AQjY",
   },
   {
     id: "starwazer128",
@@ -40,7 +40,7 @@ const projects: Project[] = [
     role:
       "I came up with the idea and prompted both the game and its logo.",
     tools: ["v0", "Suno", "Lovart"],
-    link: "#",
+    link: "https://sfinsider.github.io/starwazer128/",
   },
   {
     id: "impossible-movies",
@@ -48,12 +48,12 @@ const projects: Project[] = [
     description:
       "An application designed to create synopses for movies that haven't been made.",
     image:
-      "https://images.unsplash.com/photo-1553531384-411a247d08c3?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1517602302552-471fe67acf66?q=80&w=1600&auto=format&fit=crop",
     category: "App",
     role:
       "I came up with the idea and prompted the app.",
     tools: ["v0"],
-    link: "#",
+    link: "https://v0-impossible-movies.vercel.app/",
   },
   {
     id: "spin-pong",
@@ -66,7 +66,7 @@ const projects: Project[] = [
     role:
       "I came up with the idea and prompted both the game and its logo.",
     tools: ["v0", "Lovart"],
-    link: "#",
+    link: "https://v0-spin-pong-game-layout.vercel.app/",
   },
   {
     id: "cloud-symphony",
@@ -78,7 +78,7 @@ const projects: Project[] = [
     role:
       "I came up with the idea and prompted both the game and its music.",
     tools: ["v0", "Suno"],
-    link: "#",
+    link: "https://v0-felhojatek-v2.vercel.app/",
   },
   {
     id: "futureproof",
@@ -91,7 +91,7 @@ const projects: Project[] = [
     role:
       "I came up with the idea and prompted the app.",
     tools: ["Minimax Agent"],
-    link: "#",
+    link: "https://o7w1ssr8i3mf.space.minimax.io/",
   },
   {
     id: "imagine-illustration",
