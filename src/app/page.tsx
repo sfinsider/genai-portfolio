@@ -178,11 +178,16 @@ export default function PortfolioPage() {
   );
 
   return (
-    <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
+    <main className="relative min-h-screen bg-gradient-to-b from-[#FAFAFA] to-white text-[var(--foreground)]">
+      {/* Subtle background pattern for sophistication */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(600px_200px_at_-10%_-10%,rgba(59,130,246,0.08),transparent_60%),radial-gradient(500px_180px_at_110%_-10%,rgba(124,58,237,0.08),transparent_60%)]"
+      />
       {/* Hero */}
       <section className="px-6 md:px-10 lg:px-16 pt-24 md:pt-36 pb-12 md:pb-20">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight md:leading-[1.05]">
+        <div className="max-w-5xl mx-auto text-center rounded-2xl bg-gradient-to-b from-[#F0F9FF]/70 to-[#FAF5FF]/70 border border-[var(--border)] p-8 md:p-12">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight md:leading-[1.05] bg-gradient-to-r from-[#1E40AF] to-[#7C3AED] bg-clip-text text-transparent">
             Andras Kanai - GenAI Portfolio
           </h1>
           <p className="mt-6 max-w-2xl mx-auto text-[15px] md:text-xl leading-relaxed text-[var(--muted-foreground)]">
@@ -193,40 +198,42 @@ export default function PortfolioPage() {
 
       {/* Grid */}
       <section className="px-6 md:px-10 lg:px-16 pb-24 md:pb-32">
-        <div className="max-w-7xl mx-auto grid gap-6 sm:gap-8 md:gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((p) => (
-            <motion.button
-              key={p.id}
-              onClick={() => open(p)}
-              className="group text-left rounded-xl border border-[var(--border)] bg-[var(--card)] shadow-sm hover:shadow-lg transition-all duration-300 ease-out hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)]"
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-            >
-              <div className="relative aspect-[3/4] overflow-hidden rounded-t-xl bg-[var(--muted)]">
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  className="h-full w-full object-cover will-change-transform transition-transform duration-500 ease-out group-hover:scale-[1.05]"
-                  loading="lazy"
-                />
-                <div
-                  className={`absolute top-3 right-3 inline-flex items-center rounded-full border px-2.5 py-1 text-[12px] font-semibold tracking-wide uppercase ${tagStyles[p.category]}`}
-                >
-                  {p.category}
+        <div className="max-w-7xl mx-auto rounded-2xl border border-[var(--border)] bg-white/60 dark:bg-[var(--card)]/50 shadow-sm p-4 md:p-6">
+          <div className="grid gap-6 sm:gap-8 md:gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            {projects.map((p) => (
+              <motion.button
+                key={p.id}
+                onClick={() => open(p)}
+                className="group text-left rounded-xl border border-[var(--border)] bg-[var(--card)] shadow-[0_2px_12px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_40px_rgba(124,58,237,0.10),0_6px_20px_rgba(30,64,175,0.08)] transition-all duration-300 ease-out hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)]"
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+              >
+                <div className="relative aspect-[3/4] overflow-hidden rounded-t-xl bg-[var(--muted)]">
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="h-full w-full object-cover will-change-transform transition-transform duration-500 ease-out group-hover:scale-[1.05]"
+                    loading="lazy"
+                  />
+                  <div
+                    className={`absolute top-3 right-3 inline-flex items-center rounded-full border px-2.5 py-1 text-[12px] font-semibold tracking-wide uppercase ${tagStyles[p.category]}`}
+                  >
+                    {p.category}
+                  </div>
                 </div>
-              </div>
-              <div className="p-5 md:p-6">
-                <h3 className="text-base md:text-lg font-semibold tracking-tight">
-                  {p.title}
-                </h3>
-                <p className="mt-2 text-sm text-[var(--muted-foreground)] line-clamp-2 leading-relaxed">
-                  {p.description}
-                </p>
-              </div>
-            </motion.button>
-          ))}
+                <div className="p-5 md:p-6">
+                  <h3 className="text-base md:text-lg font-semibold tracking-tight">
+                    {p.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-[var(--muted-foreground)] line-clamp-2 leading-relaxed">
+                    {p.description}
+                  </p>
+                </div>
+              </motion.button>
+            ))}
+          </div>
         </div>
       </section>
 
