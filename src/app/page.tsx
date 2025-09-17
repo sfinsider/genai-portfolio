@@ -112,12 +112,12 @@ const projects: Project[] = [
     description:
       "John Lennon dies in the assassination attempt against him, then is resurrected and changes the world.",
     image:
-      "https://images.unsplash.com/photo-1508341591423-4347099e1f19?q=80&w=1600&auto=format&fit=crop",
+      "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Imagine1-1758144974267.png",
     category: "Video",
     role:
       "I wrote the story and prompt the tools.",
     tools: ["Flux", "Hailuo"],
-    link: "#",
+    link: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Imagine-1758144974696.mp4",
   },
 ];
 
@@ -134,8 +134,12 @@ const tagStyles: Record<Category, string> = {
 
 export default function PortfolioPage() {
   const [active, setActive] = useState<Project | null>(null);
+  const [showVideo, setShowVideo] = useState(false);
 
-  const open = useCallback((p: Project) => setActive(p), []);
+  const open = useCallback((p: Project) => {
+    setActive(p);
+    setShowVideo(false);
+  }, []);
   const close = useCallback(() => setActive(null), []);
 
   const openExternal = useCallback((url: string) => {
@@ -245,7 +249,18 @@ export default function PortfolioPage() {
           <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
             <div className="w-full max-w-2xl rounded-2xl bg-[var(--card)] text-[var(--foreground)] shadow-2xl border border-[var(--border)] animate-in zoom-in-95 fade-in duration-200 max-h-[90vh] overflow-hidden flex flex-col">
               <div className="relative aspect-[16/10] overflow-hidden">
-                <img src={active.image} alt={active.title} className="h-full w-full object-cover" />
+                {active.id === "imagine-illustration" && showVideo ? (
+                  <video
+                    src={active.link}
+                    poster={active.image}
+                    controls
+                    autoPlay
+                    playsInline
+                    className="h-full w-full object-cover"
+                  />
+                ) : (
+                  <img src={active.image} alt={active.title} className="h-full w-full object-cover" />
+                )}
               </div>
               <div className="flex-1 min-h-0 overflow-y-auto">
                 <div className="sticky top-0 z-10 bg-[var(--card)]/95 backdrop-blur supports-[backdrop-filter]:bg-[var(--card)]/80 px-5 md:px-6 py-3.5 border-b border-[var(--border)]">
@@ -287,12 +302,16 @@ export default function PortfolioPage() {
                       type="button"
                       onClick={(e) => {
                         e.stopPropagation();
-                        openExternal(active.link);
+                        if (active.id === "imagine-illustration") {
+                          setShowVideo(true);
+                        } else {
+                          openExternal(active.link);
+                        }
                       }}
                       className="inline-flex items-center gap-2 rounded-lg bg-[var(--foreground)] text-[var(--background)] px-4 py-2.5 text-sm font-medium hover:opacity-90 transition-[opacity,transform] duration-200 will-change-transform"
-                      aria-label="Open external project in a new tab"
+                      aria-label={active.id === "imagine-illustration" ? "Play project video" : "Open external project in a new tab"}
                     >
-                      View Project
+                      {active.id === "imagine-illustration" ? "Play Video" : "View Project"}
                       <span aria-hidden>↗</span>
                     </button>
                   </div>
