@@ -25,8 +25,8 @@ const projects: Project[] = [
       "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1600&auto=format&fit=crop",
     category: "Music",
     role:
-      "Composer and producer exploring narrative-linked musical motifs across classic sci‑fi literature.",
-    tools: ["Suno", "AIVA", "Logic Pro"],
+      "I developed the album's concept, selected the novels for adaptation, and was responsible for prompting and iterating with both the LLM and the music-generating AI. Furthermore, I personally wrote every single chorus.",
+    tools: ["ChatGPT-4", "Suno", "Flux"],
     link: "#",
   },
   {
@@ -38,8 +38,8 @@ const projects: Project[] = [
       "https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1600&auto=format&fit=crop",
     category: "Game",
     role:
-      "Concept, UI, and gameplay prototype for a desktop browser game with spaceway routing.",
-    tools: ["HTML5", "Canvas", "TypeScript"],
+      "I came up with the idea and prompted both the game and its logo.",
+    tools: ["v0", "Suno", "Lovart"],
     link: "#",
   },
   {
@@ -51,8 +51,8 @@ const projects: Project[] = [
       "https://images.unsplash.com/photo-1553531384-411a247d08c3?q=80&w=1600&auto=format&fit=crop",
     category: "App",
     role:
-      "Product concept and prompt systems to generate coherent speculative film synopses.",
-    tools: ["GPT-4o", "Next.js", "Figma"],
+      "I came up with the idea and prompted the app.",
+    tools: ["v0"],
     link: "#",
   },
   {
@@ -64,8 +64,8 @@ const projects: Project[] = [
       "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop",
     category: "Game",
     role:
-      "Gameplay design and physics tuning for spin mechanics and responsive controls.",
-    tools: ["Canvas", "TypeScript"],
+      "I came up with the idea and prompted both the game and its logo.",
+    tools: ["v0", "Lovart"],
     link: "#",
   },
   {
@@ -76,8 +76,8 @@ const projects: Project[] = [
       "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop",
     category: "App",
     role:
-      "UX, sound palette design, and ambient generative visuals.",
-    tools: ["Next.js", "Tone.js", "WebGL"],
+      "I came up with the idea and prompted both the game and its music.",
+    tools: ["v0", "Suno"],
     link: "#",
   },
   {
@@ -89,8 +89,8 @@ const projects: Project[] = [
       "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1600&auto=format&fit=crop",
     category: "App",
     role:
-      "Product strategy, data mapping, and content system for personalized action plans.",
-    tools: ["Next.js", "OpenAI", "Tailwind"],
+      "I came up with the idea and prompted the app.",
+    tools: ["Minimax Agent"],
     link: "#",
   },
   {
@@ -102,8 +102,8 @@ const projects: Project[] = [
       "https://images.unsplash.com/photo-1508341591423-4347099e1f19?q=80&w=1600&auto=format&fit=crop",
     category: "Video",
     role:
-      "Direction and motion treatment for narrative illustrations.",
-    tools: ["Runway Gen-3", "After Effects"],
+      "I wrote the story and prompt the tools.",
+    tools: ["Flux", "Hailuo"],
     link: "#",
   },
 ];
