@@ -23,7 +23,7 @@ const projects: Project[] = [
     description:
       "A musical concept album whose songs are thematically linked to my most beloved science fiction novels.",
     image:
-      "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1600&auto=format&fit=crop",
+      "https://i.ytimg.com/vi/ZOPnJi8AQjY/maxresdefault.jpg",
     category: "Music",
     role:
       "I developed the album's concept, selected the novels for adaptation, and was responsible for prompting and iterating with both the LLM and the music-generating AI. Furthermore, I personally wrote every single chorus.",
@@ -36,7 +36,7 @@ const projects: Project[] = [
     description:
       "This is a simple HTML-based game that reimagines the Waze navigation application for use in outer space. (Only on desktop.)",
     image:
-      "https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1600&auto=format&fit=crop",
+      "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fsfinsider.github.io%2Fstarwazer128%2F?w=1600",
     category: "Game",
     role:
       "I came up with the idea and prompted both the game and its logo.",
@@ -49,7 +49,7 @@ const projects: Project[] = [
     description:
       "An application designed to create synopses for movies that haven't been made.",
     image:
-      "https://images.unsplash.com/photo-1517602302552-471fe67acf66?q=80&w=1600&auto=format&fit=crop",
+      "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fv0-impossible-movies.vercel.app%2F?w=1600",
     category: "App",
     role:
       "I came up with the idea and prompted the app.",
@@ -62,7 +62,7 @@ const projects: Project[] = [
     description:
       "A game that puts a twist on the original, legendary Pong video game.",
     image:
-      "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop",
+      "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fv0-spin-pong-game-layout.vercel.app%2F?w=1600",
     category: "Game",
     role:
       "I came up with the idea and prompted both the game and its logo.",
@@ -74,7 +74,7 @@ const projects: Project[] = [
     title: "Cloud Symphony",
     description: "A mini, relaxation-aiding app.",
     image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop",
+      "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fv0-felhojatek-v2.vercel.app%2F?w=1600",
     category: "App",
     role:
       "I came up with the idea and prompted both the game and its music.",
@@ -87,7 +87,7 @@ const projects: Project[] = [
     description:
       "An educational application that showcases entries from the Cannes Lions International Festival of Creativity which were later exposed as scams.",
     image:
-      "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?q=80&w=1600&auto=format&fit=crop",
+      "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fscam-ad-carousel-viewer.lovable.app%2F?w=1600",
     category: "App",
     role: "I came up with the idea and prompted the app.",
     tools: ["Claude Artifact", "Lovable"],
@@ -99,7 +99,7 @@ const projects: Project[] = [
     description:
       "Get personalized insights on your career's AI risk and a actionable 30-day plan to stay competitive in the evolving job market.",
     image:
-      "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1600&auto=format&fit=crop",
+      "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fo7w1ssr8i3mf.space.minimax.io%2F?w=1600",
     category: "App",
     role:
       "I came up with the idea and prompted the app.",
