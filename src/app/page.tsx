@@ -174,14 +174,14 @@ export default function PortfolioPage() {
                   className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                   loading="lazy"
                 />
+                <div
+                  className={`absolute top-3 right-3 inline-flex items-center rounded-full border px-2.5 py-1 text-[10px] font-semibold tracking-wide uppercase ${tagStyles[p.category]}`}
+                >
+                  {p.category}
+                </div>
               </div>
               <div className="p-4 md:p-5">
-                <div
-                  className={`inline-flex items-center gap-2 rounded-full border px-2.5 py-1 text-xs font-medium ${tagStyles[p.category]}`}
-                >
-                  <span>{p.category}</span>
-                </div>
-                <h3 className="mt-3 text-base md:text-lg font-semibold">
+                <h3 className="text-base md:text-lg font-semibold">
                   {p.title}
                 </h3>
                 <p className="mt-1.5 text-sm text-[var(--muted-foreground)] line-clamp-2">
