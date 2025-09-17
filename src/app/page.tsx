@@ -248,11 +248,13 @@ export default function PortfolioPage() {
           />
           <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
             <div className="w-full max-w-2xl rounded-2xl bg-[var(--card)] text-[var(--foreground)] shadow-2xl border border-[var(--border)] animate-in zoom-in-95 fade-in duration-200 max-h-[90vh] overflow-hidden flex flex-col">
-              <div className="relative overflow-hidden ${
-                active.id === "imagine-illustration" && showVideo
-                  ? "relative bg-black flex items-center justify-center max-h-[70vh]"
-                  : "relative aspect-[16/10] overflow-hidden"
-              }">
+              <div
+                className={
+                  active?.id === "imagine-illustration" && showVideo
+                    ? "relative bg-black flex items-center justify-center max-h-[70vh] w-full"
+                    : "relative aspect-[16/10] overflow-hidden"
+                }
+              >
                 {active.id === "imagine-illustration" && showVideo ? (
                   <video
                     src={active.link}
@@ -260,7 +262,7 @@ export default function PortfolioPage() {
                     controls
                     autoPlay
                     playsInline
-                    className="max-h-full w-auto h-full object-contain"
+                    className="max-h-[70vh] max-w-full w-auto object-contain"
                   />
                 ) : (
                   <img src={active.image} alt={active.title} className="h-full w-full object-cover" />
