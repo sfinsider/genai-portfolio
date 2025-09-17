@@ -17,88 +17,94 @@ type Project = {
 
 const projects: Project[] = [
   {
-    id: "ai-score-sculptor",
-    title: "AI Score Sculptor",
-    description: "Procedural film score sketches generated from text prompts.",
+    id: "voyager-3",
+    title: "Voyager-3",
+    description:
+      "A musical concept album whose songs are thematically linked to my most beloved science fiction novels.",
     image:
-      "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1640&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1600&auto=format&fit=crop",
     category: "Music",
     role:
-      "Composed, curated, and mastered a suite of cinematic cues by orchestrating LLM prompt chains with diffusion-driven score visualizations.",
-    tools: ["GPT-4o", "Suno", "AIVA", "Adobe Audition"],
-    link: "https://example.com/projects/ai-score-sculptor",
+      "Composer and producer exploring narrative-linked musical motifs across classic sci‑fi literature.",
+    tools: ["Suno", "AIVA", "Logic Pro"],
+    link: "#",
   },
   {
-    id: "neon-runner-concepts",
-    title: "Neon Runner Concepts",
-    description: "Character sheets and key art for a synthwave game world.",
+    id: "starwazer128",
+    title: "StarWazer128",
+    description:
+      "This is a simple HTML-based game that reimagines the Waze navigation application for use in outer space. (Only on desktop.)",
     image:
-      "https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1640&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1600&auto=format&fit=crop",
     category: "Game",
     role:
-      "Led visual development with iterative diffusion models and inpainting to converge on a cohesive game identity.",
-    tools: ["Stable Diffusion XL", "Photoshop", "ComfyUI"],
-    link: "https://example.com/projects/neon-runner-concepts",
+      "Concept, UI, and gameplay prototype for a desktop browser game with spaceway routing.",
+    tools: ["HTML5", "Canvas", "TypeScript"],
+    link: "#",
   },
   {
-    id: "wellness-copilot",
-    title: "Wellness Copilot",
-    description: "Micro-interactions and UI visuals for an AI wellness app.",
+    id: "impossible-movies",
+    title: "Impossible Movies",
+    description:
+      "An application designed to create synopses for movies that haven't been made.",
     image:
-      "https://images.unsplash.com/photo-1553531384-411a247d08c3?q=80&w=1640&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1553531384-411a247d08c3?q=80&w=1600&auto=format&fit=crop",
     category: "App",
     role:
-      "Designed a minimalist UI kit and generated iconography with vector-aware diffusion, refined through Figma tokens.",
-    tools: ["Figma", "Midjourney v6", "Illustrator"],
-    link: "https://example.com/projects/wellness-copilot",
+      "Product concept and prompt systems to generate coherent speculative film synopses.",
+    tools: ["GPT-4o", "Next.js", "Figma"],
+    link: "#",
   },
   {
-    id: "latent-portraits",
-    title: "Latent Portraits",
-    description: "Portrait series exploring texture and depth in diffusion.",
+    id: "spin-pong",
+    title: "Spin Pong",
+    description:
+      "A game that puts a twist on the original, legendary Pong video game.",
     image:
-      "https://images.unsplash.com/photo-1508341591423-4347099e1f19?q=80&w=1640&auto=format&fit=crop",
-    category: "Video",
+      "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop",
+    category: "Game",
     role:
-      "Directed an animated portrait sequence using frame interpolation and text-to-video models with color grading.",
-    tools: ["Runway Gen-3", "DaVinci Resolve", "After Effects"],
-    link: "https://example.com/projects/latent-portraits",
+      "Gameplay design and physics tuning for spin mechanics and responsive controls.",
+    tools: ["Canvas", "TypeScript"],
+    link: "#",
   },
   {
-    id: "soundform-bot",
-    title: "Soundform Bot",
-    description: "Interactive bot that turns sketches into soundscapes.",
+    id: "cloud-symphony",
+    title: "Cloud Symphony",
+    description: "A mini, relaxation-aiding app.",
     image:
-      "https://images.unsplash.com/photo-1513863329456-bb2f7b90b0e3?q=80&w=1640&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop",
     category: "App",
     role:
-      "Built a playful creation flow where hand-drawn shapes map to audio textures via CLIP embeddings.",
-    tools: ["OpenAI Embeddings", "Tone.js", "Processing"],
-    link: "https://example.com/projects/soundform-bot",
+      "UX, sound palette design, and ambient generative visuals.",
+    tools: ["Next.js", "Tone.js", "WebGL"],
+    link: "#",
   },
   {
-    id: "vectorverse-cinematics",
-    title: "Vectorverse Cinematics",
-    description: "Teaser video: typographic motion meets AI footage.",
+    id: "futureproof",
+    title: "FutureProof",
+    description:
+      "Get personalized insights on your career's AI risk and a actionable 30-day plan to stay competitive in the evolving job market.",
     image:
-      "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1640&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=1600&auto=format&fit=crop",
+    category: "App",
+    role:
+      "Product strategy, data mapping, and content system for personalized action plans.",
+    tools: ["Next.js", "OpenAI", "Tailwind"],
+    link: "#",
+  },
+  {
+    id: "imagine-illustration",
+    title: "Illustration for my science fiction short story \"Imagine\"",
+    description:
+      "John Lennon dies in the assassination attempt against him, then is resurrected and changes the world.",
+    image:
+      "https://images.unsplash.com/photo-1508341591423-4347099e1f19?q=80&w=1600&auto=format&fit=crop",
     category: "Video",
     role:
-      "Edited and directed a teaser built from text-to-video plates, with bespoke kinetic type overlays.",
-    tools: ["Runway Gen-3", "After Effects", "Premiere Pro"],
-    link: "https://example.com/projects/vectorverse-cinematics",
-  },
-  {
-    id: "lofi-lab",
-    title: "Lo-Fi Lab Sessions",
-    description: "Ambient lofi tracks composed from mood prompts.",
-    image:
-      "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1640&auto=format&fit=crop",
-    category: "Music",
-    role:
-      "Produced a 7-track EP by guiding model outputs with music theory heuristics and human mixing.",
-    tools: ["Suno", "Logic Pro", "RX"],
-    link: "https://example.com/projects/lofi-lab",
+      "Direction and motion treatment for narrative illustrations.",
+    tools: ["Runway Gen-3", "After Effects"],
+    link: "#",
   },
 ];
 
