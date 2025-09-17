@@ -221,43 +221,11 @@ export default function PortfolioPage() {
       </section>
 
       {/* Footer */}
-      <footer className="px-6 md:px-10 lg:px-16 pb-16 border-t border-[var(--border)]">
-        <div className="max-w-6xl mx-auto grid gap-6 sm:grid-cols-2 items-start">
-          <div>
-            <h4 className="text-sm font-semibold tracking-wide text-[var(--muted-foreground)] uppercase">
-              About
-            </h4>
-            <p className="mt-3 text-[15px] text-[var(--foreground)]/80">
-              I'm Andras Kanai, a designer working at the intersection of AI and
-              creative tools. I prototype with models, compose with systems, and
-              deliver polished experiences.
-            </p>
-          </div>
-          <div className="sm:justify-self-end">
-            <h4 className="text-sm font-semibold tracking-wide text-[var(--muted-foreground)] uppercase">
-              Contact
-            </h4>
-            <ul className="mt-3 space-y-2 text-[15px]">
-              <li>
-                <a
-                  href="mailto:contact@andras-kanai.com?subject=Inquiry%20about%20GenAI%20work"
-                  className="underline-offset-4 hover:underline"
-                >
-                  contact@andras-kanai.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://example.com/andras-kanai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline-offset-4 hover:underline"
-                >
-                  Portfolio Site
-                </a>
-              </li>
-            </ul>
-          </div>
+      <footer className="px-6 md:px-10 lg:px-16 mt-12 md:mt-16 py-12 md:py-16 border-t border-[var(--border)] bg-[var(--secondary)]">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-sm md:text-[15px] leading-relaxed text-[var(--muted-foreground)]">
+            These GenAI creations are the work of Andras Kanai. He is a Creative Director and Futurist Speaker, a recipient of multiple creative awards, with published science fiction short stories and a non-fiction book (not available in English translations). Contact: <a href="mailto:sfinsider@gmail.com" className="underline-offset-4 hover:underline text-[var(--foreground)]">sfinsider@gmail.com</a>
+          </p>
         </div>
       </footer>
 
