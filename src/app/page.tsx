@@ -141,12 +141,12 @@ export default function PortfolioPage() {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       {/* Hero */}
-      <section className="px-6 md:px-10 lg:px-16 pt-16 md:pt-24 pb-6">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-3xl md:text-5xl font-semibold tracking-tight leading-[1.1]">
+      <section className="px-6 md:px-10 lg:px-16 pt-24 md:pt-40 pb-12 md:pb-20">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05]">
             Andras Kanai - GenAI Portfolio
           </h1>
-          <p className="mt-5 max-w-2xl text-[15px] md:text-base text-[var(--muted-foreground)]">
+          <p className="mt-6 max-w-2xl mx-auto text-[15px] md:text-lg text-[var(--muted-foreground)]">
             {heroSubtitle}
           </p>
         </div>
