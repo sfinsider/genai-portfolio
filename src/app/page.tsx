@@ -241,53 +241,57 @@ export default function PortfolioPage() {
             className="absolute inset-0 bg-black/40 backdrop-blur-[1px] opacity-100 animate-in fade-in duration-200"
             onClick={close}
           />
-          <div className="absolute inset-0 flex items-end sm:items-center justify-center p-4 sm:p-6">
-            <div className="w-full max-w-2xl rounded-2xl bg-[var(--card)] text-[var(--foreground)] shadow-lg border border-[var(--border)] animate-in zoom-in-95 fade-in duration-200">
-              <div className="relative aspect-[16/10] overflow-hidden rounded-t-2xl">
+          <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+            <div className="w-full max-w-2xl rounded-2xl bg-[var(--card)] text-[var(--foreground)] shadow-lg border border-[var(--border)] animate-in zoom-in-95 fade-in duration-200 max-h-[90vh] overflow-hidden flex flex-col">
+              <div className="relative aspect-[16/10] overflow-hidden">
                 <img src={active.image} alt={active.title} className="h-full w-full object-cover" />
               </div>
-              <div className="p-5 md:p-6">
-                <div className="flex items-center justify-between gap-3">
-                  <div className={`inline-flex rounded-full border px-3 py-1 text-xs font-medium ${tagStyles[active.category]}`}>
-                    {active.category}
+              <div className="flex-1 min-h-0 overflow-y-auto">
+                <div className="sticky top-0 z-10 bg-[var(--card)]/95 backdrop-blur supports-[backdrop-filter]:bg-[var(--card)]/80 px-5 md:px-6 py-3 border-b border-[var(--border)]">
+                  <div className="flex items-center justify-between gap-3">
+                    <div className={`inline-flex rounded-full border px-3 py-1 text-xs font-medium ${tagStyles[active.category]}`}>
+                      {active.category}
+                    </div>
+                    <button
+                      onClick={close}
+                      aria-label="Close"
+                      className="rounded-md p-2 text-[var(--muted-foreground)] hover:bg-[var(--accent)] hover:text-[var(--foreground)] transition-colors"
+                    >
+                      ✕
+                    </button>
                   </div>
-                  <button
-                    onClick={close}
-                    aria-label="Close"
-                    className="rounded-md p-2 text-[var(--muted-foreground)] hover:bg-[var(--accent)] hover:text-[var(--foreground)] transition-colors"
-                  >
-                    ✕
-                  </button>
                 </div>
-                <h3 className="mt-3 text-xl font-semibold">{active.title}</h3>
-                <p className="mt-2 text-[15px] text-[var(--muted-foreground)]">{active.description}</p>
-                <div className="mt-4">
-                  <h4 className="text-sm font-semibold tracking-wide text-[var(--muted-foreground)] uppercase">Role</h4>
-                  <p className="mt-1 text-[15px]">{active.role}</p>
-                </div>
-                <div className="mt-4">
-                  <h4 className="text-sm font-semibold tracking-wide text-[var(--muted-foreground)] uppercase">AI Tools</h4>
-                  <ul className="mt-1 flex flex-wrap gap-2">
-                    {active.tools.map((t) => (
-                      <li
-                        key={t}
-                        className="rounded-full border border-[var(--border)] bg-[var(--secondary)] text-[var(--secondary-foreground)] px-3 py-1 text-xs"
-                      >
-                        {t}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="mt-6">
-                  <a
-                    href={active.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-lg bg-[var(--foreground)] text-[var(--background)] px-4 py-2 text-sm font-medium hover:opacity-90 transition-opacity"
-                  >
-                    View Project
-                    <span aria-hidden>↗</span>
-                  </a>
+                <div className="p-5 md:p-6">
+                  <h3 className="text-xl font-semibold">{active.title}</h3>
+                  <p className="mt-2 text-[15px] text-[var(--muted-foreground)]">{active.description}</p>
+                  <div className="mt-4">
+                    <h4 className="text-sm font-semibold tracking-wide text-[var(--muted-foreground)] uppercase">Role</h4>
+                    <p className="mt-1 text-[15px]">{active.role}</p>
+                  </div>
+                  <div className="mt-4">
+                    <h4 className="text-sm font-semibold tracking-wide text-[var(--muted-foreground)] uppercase">AI Tools</h4>
+                    <ul className="mt-1 flex flex-wrap gap-2">
+                      {active.tools.map((t) => (
+                        <li
+                          key={t}
+                          className="rounded-full border border-[var(--border)] bg-[var(--secondary)] text-[var(--secondary-foreground)] px-3 py-1 text-xs"
+                        >
+                          {t}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="mt-6 pb-2">
+                    <a
+                      href={active.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-lg bg-[var(--foreground)] text-[var(--background)] px-4 py-2 text-sm font-medium hover:opacity-90 transition-opacity"
+                    >
+                      View Project
+                      <span aria-hidden>↗</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
