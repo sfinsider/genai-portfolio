@@ -123,13 +123,13 @@ const projects: Project[] = [
 
 const tagStyles: Record<Category, string> = {
   Music:
-    "bg-[#8B5CF6]/15 text-[#8B5CF6] border-[#8B5CF6]/30 dark:bg-[#8B5CF6]/20 dark:text-[#C4B5FD] dark:border-[#8B5CF6]/40",
+    "bg-[#8B5CF6]/25 text-[#8B5CF6] border-[#8B5CF6]/40 dark:bg-[#8B5CF6]/25 dark:text-[#C4B5FD] dark:border-[#8B5CF6]/45",
   Game:
-    "bg-[#3B82F6]/15 text-[#3B82F6] border-[#3B82F6]/30 dark:bg-[#3B82F6]/20 dark:text-[#93C5FD] dark:border-[#3B82F6]/40",
+    "bg-[#3B82F6]/25 text-[#3B82F6] border-[#3B82F6]/40 dark:bg-[#3B82F6]/25 dark:text-[#93C5FD] dark:border-[#3B82F6]/45",
   App:
-    "bg-[#10B981]/15 text-[#10B981] border-[#10B981]/30 dark:bg-[#10B981]/20 dark:text-[#6EE7B7] dark:border-[#10B981]/40",
+    "bg-[#10B981]/25 text-[#10B981] border-[#10B981]/40 dark:bg-[#10B981]/25 dark:text-[#6EE7B7] dark:border-[#10B981]/45",
   Video:
-    "bg-[#F59E0B]/15 text-[#F59E0B] border-[#F59E0B]/30 dark:bg-[#F59E0B]/20 dark:text-[#FCD34D] dark:border-[#F59E0B]/40",
+    "bg-[#F59E0B]/25 text-[#F59E0B] border-[#F59E0B]/40 dark:bg-[#F59E0B]/25 dark:text-[#FCD34D] dark:border-[#F59E0B]/45",
 };
 
 export default function PortfolioPage() {
