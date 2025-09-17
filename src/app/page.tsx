@@ -82,7 +82,7 @@ const projects: Project[] = [
   },
   {
     id: "scam-ads-cannes",
-    title: "Scam Advertisements at the Cannes Lions Festival",
+    title: "Scam Ads at Cannes",
     description:
       "An educational application that showcases entries from the Cannes Lions International Festival of Creativity which were later exposed as scams.",
     image:
