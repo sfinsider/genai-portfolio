@@ -81,6 +81,18 @@ const projects: Project[] = [
     link: "https://v0-felhojatek-v2.vercel.app/",
   },
   {
+    id: "scam-ads-cannes",
+    title: "Scam Advertisements at the Cannes Lions Festival",
+    description:
+      "An educational application that showcases entries from the Cannes Lions International Festival of Creativity which were later exposed as scams.",
+    image:
+      "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?q=80&w=1600&auto=format&fit=crop",
+    category: "App",
+    role: "I came up with the idea and prompted the app.",
+    tools: ["Claude Artifact", "Lovable"],
+    link: "https://scam-ad-carousel-viewer.lovable.app/",
+  },
+  {
     id: "futureproof",
     title: "FutureProof",
     description:
