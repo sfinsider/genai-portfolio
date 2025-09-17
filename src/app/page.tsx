@@ -173,7 +173,7 @@ export default function PortfolioPage() {
 
   const heroSubtitle = useMemo(
     () =>
-      "Designing with intelligent systems to craft music, visuals, and interactive experiences.",
+      "A creative mind's experiments with generative artificial intelligence.",
     []
   );
 
