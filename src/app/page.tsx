@@ -124,6 +124,21 @@ export default function PortfolioPage() {
   const open = useCallback((p: Project) => setActive(p), []);
   const close = useCallback(() => setActive(null), []);
 
+  const openExternal = useCallback((url: string) => {
+    if (!url || url === "#") return;
+    // Create and click a temporary anchor to reliably open in a new tab
+    const a = document.createElement("a");
+    a.href = url;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    // Ensure anchor is not visible and part of the DOM for some browsers
+    a.style.position = "absolute";
+    a.style.left = "-9999px";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }, []);
+
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       if (e.key === "Escape") close();
