@@ -191,20 +191,24 @@ export default function PortfolioPage() {
       <section className="px-6 md:px-10 lg:px-16 pb-24 md:pb-32">
         <div className="max-w-7xl mx-auto grid gap-6 sm:gap-8 md:gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((p) => (
-            <button
+            <motion.button
               key={p.id}
               onClick={() => open(p)}
               className="group text-left rounded-xl border border-[var(--border)] bg-[var(--card)] shadow-sm hover:shadow-lg transition-all duration-300 ease-out hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)]"
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
             >
               <div className="relative aspect-[3/4] overflow-hidden rounded-t-xl bg-[var(--muted)]">
                 <img
                   src={p.image}
                   alt={p.title}
-                  className="h-full w-full object-cover will-change-transform transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                  className="h-full w-full object-cover will-change-transform transition-transform duration-500 ease-out group-hover:scale-[1.05]"
                   loading="lazy"
                 />
                 <div
-                  className={`absolute top-3 right-3 inline-flex items-center rounded-full border px-2.5 py-1 text-[10px] font-semibold tracking-wide uppercase ${tagStyles[p.category]}`}
+                  className={`absolute top-3 right-3 inline-flex items-center rounded-full border px-2.5 py-1 text-[12px] font-semibold tracking-wide uppercase ${tagStyles[p.category]}`}
                 >
                   {p.category}
                 </div>
@@ -217,7 +221,7 @@ export default function PortfolioPage() {
                   {p.description}
                 </p>
               </div>
-            </button>
+            </motion.button>
           ))}
         </div>
       </section>
