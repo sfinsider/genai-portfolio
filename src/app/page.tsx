@@ -297,15 +297,18 @@ export default function PortfolioPage() {
                     </ul>
                   </div>
                   <div className="mt-6 pb-2">
-                    <a
-                      href={active.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-lg bg-[var(--foreground)] text-[var(--background)] px-4 py-2 text-sm font-medium hover:opacity-90 transition-opacity"
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        openExternal(active.link);
+                      }}
+                      className="inline-flex items-center gap-2 rounded-lg bg-[var(--foreground)] text-[var(--background)] px-4 py-2 text-sm font-medium hover:opacity-90 transition-opacity cursor-pointer"
+                      aria-label="Open external project in a new tab"
                     >
                       View Project
                       <span aria-hidden>↗</span>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
