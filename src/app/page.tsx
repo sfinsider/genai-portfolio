@@ -129,6 +129,8 @@ const tagStyles: Record<Category, string> = {
     "bg-[#10B981]/25 text-[#10B981] border-[#10B981]/40 dark:bg-[#10B981]/25 dark:text-[#6EE7B7] dark:border-[#10B981]/45",
   Video:
     "bg-[#F59E0B]/25 text-[#F59E0B] border-[#F59E0B]/40 dark:bg-[#F59E0B]/25 dark:text-[#FCD34D] dark:border-[#F59E0B]/45",
+  Tool:
+    "bg-[#14B8A6]/25 text-[#14B8A6] border-[#14B8A6]/40 dark:bg-[#14B8A6]/25 dark:text-[#5EEAD4] dark:border-[#14B8A6]/45",
 };
 
 export default function PortfolioPage() {
