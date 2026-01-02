@@ -112,7 +112,7 @@ const projects: Project[] = [
     description:
       "I took the limited-run Imagine with Claude for a spin. I was curious: what if the French Minitel had evolved into the global internet?",
     image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80",
+      "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/3a2f4ce0-02a1-4828-b06d-2492a71846de/minitel-wins-resized-1767372579075.jpg?width=8000&height=8000&resize=contain",
     category: "Tool",
     role: "I came up with the idea.",
     tools: ["Imagine with Claude"],
