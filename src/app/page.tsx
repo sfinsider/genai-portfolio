@@ -106,7 +106,6 @@ const projects: Project[] = [
     tools: ["Minimax Agent"],
     link: "https://o7w1ssr8i3mf.space.minimax.io/",
   },
-
 ];
 
 const tagStyles: Record<Category, string> = {
