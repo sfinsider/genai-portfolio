@@ -240,14 +240,8 @@ export default function PortfolioPage() {
           />
           <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
             <div className="w-full max-w-2xl rounded-2xl bg-[var(--card)] text-[var(--foreground)] shadow-2xl border border-[var(--border)] animate-in zoom-in-95 fade-in duration-200 max-h-[90vh] overflow-hidden flex flex-col">
-              <div
-                className={
-                  active?.id === "imagine-illustration" && showVideo
-                    ? "relative bg-black flex items-center justify-center max-h-[70vh] w-full"
-                    : "relative aspect-[16/10] overflow-hidden"
-                }
-              >
-<img src={active.image} alt={active.title} className="h-full w-full object-cover" />
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <img src={active.image} alt={active.title} className="h-full w-full object-cover" />
               </div>
               <div className="flex-1 min-h-0 overflow-y-auto">
                 <div className="sticky top-0 z-10 bg-[var(--card)]/95 backdrop-blur supports-[backdrop-filter]:bg-[var(--card)]/80 px-5 md:px-6 py-3.5 border-b border-[var(--border)]">
