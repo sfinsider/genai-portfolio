@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 
-type Category = "Music" | "Game" | "App" | "Video";
+type Category = "Music" | "Game" | "App" | "Video" | "Tool";
 
 type Project = {
   id: string;
