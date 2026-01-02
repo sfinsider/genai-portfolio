@@ -130,6 +130,18 @@ const projects: Project[] = [
     tools: ["v0", "Suno", "Nano Banana Pro"],
     link: "https://v0-ghost-shift.vercel.app/",
   },
+  {
+    id: "photoflash",
+    title: "PhotoFlash",
+    description:
+      "It transform your photos into 280-word stories.",
+    image:
+      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80",
+    category: "App",
+    role: "I came up with the idea and prompted the app.",
+    tools: ["Claude Artifact"],
+    link: "https://claude.ai/public/artifacts/b70af90e-d90c-422d-af31-f84aac4b7430",
+  },
 ];
 
 const tagStyles: Record<Category, string> = {
