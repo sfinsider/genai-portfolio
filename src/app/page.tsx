@@ -118,6 +118,18 @@ const projects: Project[] = [
     tools: ["Imagine with Claude"],
     link: "https://www.loom.com/share/6241e085d97a4194a6e732754fb93207",
   },
+  {
+    id: "ghost-shift",
+    title: "Ghost Shift",
+    description:
+      "This game explores the perils of automation.",
+    image:
+      "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fv0-ghost-shift.vercel.app%2F?w=1600",
+    category: "Game",
+    role: "I came up with the idea and prompted the game.",
+    tools: ["v0", "Suno", "Nano Banana Pro"],
+    link: "https://v0-ghost-shift.vercel.app/",
+  },
 ];
 
 const tagStyles: Record<Category, string> = {
