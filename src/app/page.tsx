@@ -106,6 +106,18 @@ const projects: Project[] = [
     tools: ["Minimax Agent"],
     link: "https://o7w1ssr8i3mf.space.minimax.io/",
   },
+  {
+    id: "imagine-claude",
+    title: "Trying Imagine with Claude tool",
+    description:
+      "I took the limited-run Imagine with Claude for a spin. I was curious: what if the French Minitel had evolved into the global internet?",
+    image:
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80",
+    category: "Tool",
+    role: "I came up with the idea.",
+    tools: ["Imagine with Claude"],
+    link: "https://www.loom.com/share/6241e085d97a4194a6e732754fb93207",
+  },
 ];
 
 const tagStyles: Record<Category, string> = {
