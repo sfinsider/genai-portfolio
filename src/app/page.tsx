@@ -106,19 +106,7 @@ const projects: Project[] = [
     tools: ["Minimax Agent"],
     link: "https://o7w1ssr8i3mf.space.minimax.io/",
   },
-  {
-    id: "imagine-illustration",
-    title: "Illustration for my science fiction short story \"Imagine\"",
-    description:
-      "John Lennon dies in the assassination attempt against him, then is resurrected and changes the world.",
-    image:
-      "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Imagine1-1758144974267.png",
-    category: "Video",
-    role:
-      "I wrote the story and prompt the tools.",
-    tools: ["Flux", "Hailuo"],
-    link: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/Imagine-1758144974696.mp4",
-  },
+
 ];
 
 const tagStyles: Record<Category, string> = {
