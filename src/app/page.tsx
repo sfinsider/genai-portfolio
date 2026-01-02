@@ -121,11 +121,9 @@ const tagStyles: Record<Category, string> = {
 
 export default function PortfolioPage() {
   const [active, setActive] = useState<Project | null>(null);
-  const [showVideo, setShowVideo] = useState(false);
 
   const open = useCallback((p: Project) => {
     setActive(p);
-    setShowVideo(false);
   }, []);
   const close = useCallback(() => setActive(null), []);
 
