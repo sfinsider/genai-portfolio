@@ -279,23 +279,19 @@ export default function PortfolioPage() {
                     </ul>
                   </div>
                   <div className="mt-8 pb-2">
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        if (active.id === "imagine-illustration") {
-                          setShowVideo(true);
-                        } else {
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
                           openExternal(active.link);
-                        }
-                      }}
-                      className="inline-flex items-center gap-2 rounded-lg bg-[var(--foreground)] text-[var(--background)] px-4 py-2.5 text-sm font-medium hover:opacity-90 transition-[opacity,transform] duration-200 will-change-transform"
-                      aria-label={active.id === "imagine-illustration" ? "Play project video" : "Open external project in a new tab"}
-                    >
-                      {active.id === "imagine-illustration" ? "Play Video" : "View Project"}
-                      <span aria-hidden>↗</span>
-                    </button>
-                  </div>
+                        }}
+                        className="inline-flex items-center gap-2 rounded-lg bg-[var(--foreground)] text-[var(--background)] px-4 py-2.5 text-sm font-medium hover:opacity-90 transition-[opacity,transform] duration-200 will-change-transform"
+                        aria-label="Open external project in a new tab"
+                      >
+                        View Project
+                        <span aria-hidden>↗</span>
+                      </button>
+                    </div>
                 </div>
               </div>
             </div>
