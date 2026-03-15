@@ -140,7 +140,7 @@ const projects: Project[] = [
     category: "App",
     role: "I came up with the idea and prompted the app.",
     tools: ["Claude Artifact"],
-    link: "https://claude.ai/public/artifacts/b70af90e-d90c-422d-af31-f84aac4b7430",
+    link: "https://youtu.be/PEwaBWK9JFg",
   },
 ];
 
